@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --clr-dark-blue: hsl(216, 49%, 15%);
+    --clr-violet-500: hsl(272, 100%, 62%);
+    --clr-violet-50: hsl(272, 100%, 92%);
+
+    --fnt-work-sans: "Work Sans", sans-serif;
+  }
+
+  html,
+  body {
+    @apply h-full font-work-sans;
+  }
+}
+
+@layer utilities {
+  .input {
+    @apply border-b-2 outline-none focus:outline-none focus:border-violet-500 duration-300 accent-violet-500 py-2 text-dark-blue focus:text-violet-500 placeholder:text-sm focus:placeholder:text-violet-500;
+  }
+}
